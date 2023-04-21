@@ -1,0 +1,19 @@
+import React from "react";
+
+const ImageUpload = ({ onChange }) => {
+  return (
+    <label className="w-full h-[250px] flex items-center justify-center cursor-pointer rounded-lg overflow-hidden">
+      <input type="file" onChange={onChange} className="hidden" />
+      <div className="w-full h-full flex flex-col items-center justify-center bg-gray-200">
+        <img
+          src="../../../images/img-upload.png"
+          alt=""
+          className="max-w-[80px]"
+        />
+        <h3 className="font-semibold text-lg">Choose photo</h3>
+      </div>
+    </label>
+  );
+};
+
+export default ImageUpload;
