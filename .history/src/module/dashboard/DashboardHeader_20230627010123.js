@@ -118,7 +118,6 @@ const DashboardHeader = () => {
         width="200px"
         kind="primary"
         to={linkUrlBtn()}
-        onClick={checkStatusUser}
       >
         Write new post
       </Button>

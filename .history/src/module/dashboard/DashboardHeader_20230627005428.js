@@ -94,13 +94,6 @@ const DashboardHeader = () => {
     setShow(!show);
   };
 
-  const linkUrlBtn = () => {
-    if (user?.status === userStatus.BAN) {
-      return null;
-    }
-    return "/manage/add-post";
-  };
-
   const checkStatusUser = () => {
     if (user?.status === userStatus.BAN) {
       toast.info("Your account has been banned, so you can't write new post!", {
@@ -108,7 +101,10 @@ const DashboardHeader = () => {
         pauseOnHover: true,
         autoClose: 2000,
       });
+      return null;
     }
+    console.log("not ban");
+    return "/manage/add-post";
   };
   return (
     <DashboardHeaderStyled>
@@ -117,8 +113,7 @@ const DashboardHeader = () => {
         height="60%"
         width="200px"
         kind="primary"
-        to={linkUrlBtn()}
-        onClick={checkStatusUser}
+        to={checkStatusUser()}
       >
         Write new post
       </Button>
