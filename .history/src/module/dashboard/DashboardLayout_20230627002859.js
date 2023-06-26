@@ -54,18 +54,16 @@ const DashboardLayout = () => {
   }, [authUser, navigate]);
 
   return (
-    <DashboardContainerStyled>
-      <div className="container-1600">
-        <DashboardLayoutStyled>
-          <DashboardHeader></DashboardHeader>
-          <div className="dashboard-main">
-            <DashboardSidebar></DashboardSidebar>
-            <div className="dashboard-children">
-              <Outlet></Outlet>
-            </div>
+    <DashboardContainerStyled className="container-1600">
+      <DashboardLayoutStyled>
+        <DashboardHeader></DashboardHeader>
+        <div className="dashboard-main">
+          <DashboardSidebar></DashboardSidebar>
+          <div className="dashboard-children">
+            <Outlet></Outlet>
           </div>
-        </DashboardLayoutStyled>
-      </div>
+        </div>
+      </DashboardLayoutStyled>
     </DashboardContainerStyled>
   );
 };

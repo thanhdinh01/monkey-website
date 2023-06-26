@@ -54,7 +54,7 @@ const DashboardLayout = () => {
   }, [authUser, navigate]);
 
   return (
-    <DashboardContainerStyled>
+    <DashboardContainerStyled className="container-1600">
       <div className="container-1600">
         <DashboardLayoutStyled>
           <DashboardHeader></DashboardHeader>
