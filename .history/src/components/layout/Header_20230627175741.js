@@ -308,7 +308,7 @@ const Header = () => {
               <IconSearch></IconSearch>
             </button>
           </form>
-          {!user?.email ? (
+          {!user ? (
             <Button
               type="button"
               height="85%"
